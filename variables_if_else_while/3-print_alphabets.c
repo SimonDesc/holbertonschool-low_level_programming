@@ -11,13 +11,12 @@ int main(void)
 {
 	int n = 'A';
 	int i = 'a';
-	
-        while (i >= 97 && i <= 122)
+
+	while (i >= 97 && i <= 122)
 	{
 		putchar(i);
 		i++;
-        }
-
+	}
 	while (n >= 65 && n <= 90)
 	{
 		putchar(n);
