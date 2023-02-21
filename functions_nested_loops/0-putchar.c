@@ -18,5 +18,5 @@ int main(void)
 	printfunc('a');
 	printfunc('r');
 	putchar('\n');
-	return(0);
+	return 0;
 }
