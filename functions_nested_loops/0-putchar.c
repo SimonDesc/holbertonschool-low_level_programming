@@ -6,6 +6,7 @@
  *
  * Return: Always 0 (Success)
  */
+void printfunc(char a);
 
 int main(void)
 {
@@ -20,3 +21,9 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
+void printfunc(char a)
+{
+        putchar(a);
+}
+
