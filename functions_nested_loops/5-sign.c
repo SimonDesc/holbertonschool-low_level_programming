@@ -2,7 +2,7 @@
 
 /**
  *print_sign - return 1 OR  0
- *@c:takeaint
+ *@n:takeaint
  *
  * Return: Always 0.
  */
