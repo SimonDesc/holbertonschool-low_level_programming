@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _islower - return 1 if lowercase, 0 else
- * @c: take a int 
+ *_islower - return 1 if lowercase, 0 else
+ *@c:takeaint
  *
  * Return: Always 0.
  */
