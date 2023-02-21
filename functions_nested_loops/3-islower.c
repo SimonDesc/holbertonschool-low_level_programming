@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print _islower - return 1 if lowercase 0 .
+ * int _islower(int c) - return 1 if lowercase 0 .
  *
  * Return: Always 0.
  */
