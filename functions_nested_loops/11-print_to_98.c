@@ -18,6 +18,10 @@ void print_to_98(int n)
 			{
 				printf(", ");
 			}
+			else if (n == 98)
+			{
+				putchar('\n');
+			}
 			n++;
 		}
 	}
@@ -29,6 +33,10 @@ void print_to_98(int n)
 			if (n != 98)
 			{
 				printf(", ");
+			}
+			else if (n == 98)
+			{
+				putchar('\n');
 			}
 			n--;
 		}
