@@ -21,7 +21,10 @@ void times_table(void)
 
 			if (dizaine == 0)
 			{
-				_putchar(' ');
+				if (j != 0)
+				{
+					_putchar(' ');
+				}
 				_putchar(unite + '0');
 			}
 			else if (dizaine != 0)
