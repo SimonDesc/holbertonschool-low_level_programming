@@ -7,25 +7,28 @@
  */
 void times_table(void)
 {
-	int i = 1;
+	int i = 0;
 	
 	while (i < 10)
 	{
-		int j = 1;
+		int j = 0;
 
 		while (j < 10)
 		{
 			int product = i * j;
-			int ones_digit = product % 10;
-			int tens_digit = product / 10;
+			int unite = product % 10;
+			int dizaine = product / 10;
 
-			if (tens_digit == 0)
+			if (dizaine == 0)
 			{
 				_putchar(' ');
-				ones_digit = product % 10;
+				_putchar(unite + '0');
 			}
-			_putchar(tens_digit + '0');
-			_putchar(ones_digit + '0');
+			else if (dizaine != 0)
+			{
+				_putchar(dizaine + '0');
+				_putchar(unite + '0');
+			}
 			if (j != 9)
 			{
 				_putchar(',');
