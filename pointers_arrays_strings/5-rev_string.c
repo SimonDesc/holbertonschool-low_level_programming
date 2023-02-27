@@ -28,4 +28,8 @@ void rev_string(char *s)
 		}
 	}
 	*s = '\0';
+	if (*s != 0)
+	{
+		_putchar('\n');
+	}
 }
