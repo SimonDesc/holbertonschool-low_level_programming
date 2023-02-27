@@ -27,6 +27,5 @@ void rev_string(char *s)
 			i = i - 1;
 		}
 	}
-	_putchar('\n');
 	*s = '\0';
 }
