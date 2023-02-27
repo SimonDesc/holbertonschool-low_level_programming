@@ -9,22 +9,22 @@ void print_rev(char *s)
 {
 	int i = 0;
 	int j = 0;
-	if (s[i] != '\0')
+	while (s[i] != '\0')
 	{
-		while (s[i] != '\0')
-		{
-			i++;
-		}
+		i++;
+	}
 
-		while (j < i + 1)
+	while (j < i + 1)
+	{
+		if (s[i] == '\0')
+		{
+			i = i - 1;
+		}
+		else
 		{
 			_putchar(s[i]);
-			i = i -1;
+			i = i - 1;
 		}
-		_putchar('\n');
 	}
-	else
-	{
-		_putchar('\n');
-	}
+	_putchar('\n');
 }
