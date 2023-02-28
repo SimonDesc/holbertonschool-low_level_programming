@@ -7,7 +7,6 @@
 void puts_half(char *str)
 {
 	int i = 0;
-	int j = 0;
 	int max = 0;
 
 	while (str[i] != '\0')
@@ -18,17 +17,17 @@ void puts_half(char *str)
 	
 	if (max % 2 == 0)
 	{
-		j = max / 2;
+		max = max / 2;
 	}
 	else
 	{
-		j = (max - 1) / 2;
+		max = (max - 1) / 2;
 	}
 
-	while (j <= max)
+	while (str[max] != '\0')
 	{
-		_putchar(str[j]);
-		j++;
+		_putchar(str[max]);
+		max++;
 	}
 
 	_putchar('\n');
