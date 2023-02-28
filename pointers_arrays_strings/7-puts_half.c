@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * puts_half - return the second half of the string
- * @str: the str
- * Return: Always 0
- */
+* puts_half - return the second half of the string
+* @str: the str
+* Return: Always 0
+	*/
 void puts_half(char *str)
 {
 	int i = 0;
@@ -15,14 +15,20 @@ void puts_half(char *str)
 		i++;
 	}
 	max = i;
-	j = i/2;
+	if (max % 2 == 0)
+	{
+		j = i / 2;
+	}
+	else
+	{
+		j = (i -1) / 2;
+	}
 
 	while (j < max)
 	{
 		_putchar(str[j]);
 		j++;
 	}
-
 
 	_putchar('\n');
 }
