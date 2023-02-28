@@ -15,13 +15,14 @@ void puts_half(char *str)
 		i++;
 	}
 	max = i;
+	
 	if (max % 2 == 0)
 	{
-		j = i / 2;
+		j = max / 2;
 	}
 	else
 	{
-		j = (i -1) / 2;
+		j = (max - 1) / 2;
 	}
 
 	while (j < max)
