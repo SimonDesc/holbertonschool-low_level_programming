@@ -23,7 +23,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		max = (max - 1) / 2;
+		max = (max + 1) / 2;
 	}
 
 	while (str[max] != '\0')
