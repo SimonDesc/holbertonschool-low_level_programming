@@ -1,35 +1,25 @@
 #include "main.h"
 /**
- * rev_string - print a string in reverse, then delete the value
- * @s: a pointer str
- *
+ * rev_string - the function who return the lenght of a string
+ * @s: the char
+ * Return: the numberof charachers in this array
  */
-
 void rev_string(char *s)
 {
-	int i = 0;
-	int j = 0;
+	int compteur = 0;
+	int toto = 0;
+	int temp = 0;
 
-	while (s[i] != '\0')
+	for (compteur = 0; s[compteur] != '\0'; compteur++)
 	{
-		i++;
 	}
-
-	while (j < i + 1)
+	compteur = compteur - 1;
+	while (toto <= compteur)
 	{
-		if (s[i] == '\0')
-		{
-			i = i - 1;
-		}
-		else
-		{
-			_putchar(s[i]);
-			i = i - 1;
-		}
+		temp = s[toto];
+		s[toto] = s[compteur];
+		s[compteur] = temp;
+		compteur--;
+		toto++;
 	}
-	if (*s == '0')
-	{
-		_putchar('\n');
-	}
-	*s = '\0';
 }
