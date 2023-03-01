@@ -21,3 +21,5 @@ void print_array(int *a, int n);
 void *_strcat(char *dest, char *src);
 
 void *_strncpy(char *dest, char *src, int n);
+
+int _strcmp(char *s1, char *s2);
