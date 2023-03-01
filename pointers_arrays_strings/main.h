@@ -19,3 +19,5 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 
 void *_strcat(char *dest, char *src);
+
+void *_strncpy(char *dest, char *src, int n);
