@@ -4,6 +4,7 @@
  * *_strncat - This function appends the src string to the dest string
  * @dest: the destination
  * @src: the source
+ * @n : the number of caractere to take
  * Return: Always 0
  */
 void *_strncat(char *dest, char *src, int n)
