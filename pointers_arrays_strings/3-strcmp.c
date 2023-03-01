@@ -1,17 +1,15 @@
 #include <stdio.h>
-
 /**
- *  * main - check the code
- *   *
- *    * Return: Always 0.
- *     */
+ * _strcmp - returns an integer indicating
+ * the result of the comparison
+ * @s1: the first char
+ * @s2: the second char
+ * Return: result
+ */
+
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-	int c1 = 0;
-	int c2 = 0;
-	int cmax = 0;
-	int result = 0;
+	int i, c1, c2, cmax, result = 0;
 
 	while (s1[c1] != '\0')
 	{
@@ -43,6 +41,6 @@ int _strcmp(char *s1, char *s2)
 		}
 		i++;
 	}
-	return(result);
+	return (result);
 
 }
