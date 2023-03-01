@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * *_strncpy - copies the string pointed to by src,
- *  including the terminating null byte ('\0'), to the buffer pointed to by dest.
+ *  including the terminating null byte ('\0').
  * @dest: the destination
  * @src: the source
  * @n : the number of caractere to take
@@ -11,31 +11,17 @@
 void *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
-	int nb_src = 0;
 
-	while (src[nb_src] != '\0')
+	while (i < n && src[i] != '\0')
 	{
-		nb_src++;
+		dest[i] = src[i];
+		i++;
 	}
 
-	if (nb_src <= n)
+	while (i < n)
 	{
-		while (i < n)
-		{
-			dest[i] = src[i];
-			i++;
-		}
 		dest[i] = '\0';
+		i++;
 	}
-
-	else
-	{
-		while (i < n)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-	}
-	
 	return (dest);
 }
