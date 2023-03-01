@@ -20,7 +20,7 @@ void *_strncpy(char *dest, char *src, int n)
 
 	if (nb_src <= n)
 	{
-		while (i < n)
+		while (i <= n)
 		{
 			dest[i] = src[i];
 			i++;
@@ -30,7 +30,7 @@ void *_strncpy(char *dest, char *src, int n)
 
 	else
 	{
-		while (i < n)
+		while (i <= n)
 		{
 			dest[i] = src[i];
 			i++;
