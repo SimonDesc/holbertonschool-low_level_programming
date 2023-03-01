@@ -1,17 +1,18 @@
+#include "main.h"
 #include <stdio.h>
-
 /**
- *  * main - check the code
- *   *
- *    * Return: Always 0.
- *     */
+ * _strcmp - returns an integer indicating the result of the
+ *  comparison
+ * 
+ * @s1: the first word
+ * @s2: the second word
+ * Return: 0,if the s1 and s2 are equal;
+ * a negative value if s1 is less than s2;
+ * a positive value if s1 is greater than s2.
+ */
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-	int c1 = 0;
-	int c2 = 0;
-	int cmax = 0;
-	int result = 0;
+	int i, c1, c2, cmax, result=0;
 
 	while (s1[c1] != '\0')
 	{
@@ -43,6 +44,6 @@ int _strcmp(char *s1, char *s2)
 		}
 		i++;
 	}
-	return(result);
+	return(0);
 
 }
