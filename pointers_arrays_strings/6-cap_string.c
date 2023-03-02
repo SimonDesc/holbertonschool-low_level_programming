@@ -7,12 +7,17 @@
 char *cap_string(char *str)
 {
 	int i = 0;
+	int j;
+	char s[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\t', '\n'};
 
 	while (str[i] != '\0')
 	{
-		if ((str[i - 1] < 48 || str[i - 1] > 122) && (str[i] > 96 && str[i] < 123))
+		for (j = 0; s[j] != '\0'; j++;)
 		{
-			str[i] = str[i] - ('a' - 'A');
+			if (s[j] == str[i - 1] && str[i] > 96 && str[i] < 123)
+			{
+				str[i] = str[i] - ('a' - 'A');
+			}
 		}
 		i++;
 	}
