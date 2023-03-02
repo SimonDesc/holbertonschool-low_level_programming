@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * cap_string - take a pointer string and return the first letter in uppercase
- * @str: the pointer string
+ * @str: th pointer string
  * Return: the string in the pointer
  */
 char *cap_string(char *str)
