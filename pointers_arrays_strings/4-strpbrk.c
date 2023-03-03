@@ -2,16 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strspn -gets the length of a prefix substring
+ * strpbrk - function that searches a string for any of a set of bytes.
  * @s: the string
- * @accept: the allowed caracter
- * Return: the length of allowed car
+ * @accept: the caracter
+ * Return:  a pointer to the byte in s that matches one of the bytes
  */
 char *_strpbrk(char *s, char *accept)
 {
 	int i;
 	int j;
-	int result = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
