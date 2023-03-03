@@ -12,7 +12,6 @@ unsigned int _strspn(char *s, char *accept)
 	int i;
 	int j;
 	int result;
-	int total;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -24,11 +23,10 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (result <= 0 || total == result)
+		if (accept[j] != '\0')
 		{
 			return (result);
 		}
-		total = result;
 	}
 	return (0);
 }
