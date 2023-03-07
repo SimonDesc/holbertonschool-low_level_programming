@@ -2,6 +2,7 @@
 
 /**
  * main - Entry point
+ *@argc: the number of arguments
  *@argv: the arguments
  * Return: Always 0 (Success)
  */
