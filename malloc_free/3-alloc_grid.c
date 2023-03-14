@@ -12,7 +12,7 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **grid;
+	int **grid; /* Déclare un pointeur vers un tableau à deux dimensions */
 	int i = 0;
 	int j = 0;
 
@@ -27,11 +27,13 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
+	/* Boucle pour allouer de la mémoire pour chaque ligne du tableau */
 	for (i = 0; i < height; i++)
 	{
-		grid[i] = malloc(width * sizeof(int));
+		grid[i] = malloc(width * sizeof(int)); /* Alloue de la mémoire pour chaque colonne de la ligne i */ 
 		if (grid[i] == NULL)
 		{
+			/* Libère la mémoire allouée précédemment pour les lignes précédentes en cas d'échec */
 			for (j = 0; j < i; j++)
 			{
 				free(grid[j]);
@@ -39,6 +41,7 @@ int **alloc_grid(int width, int height)
 			free(grid);
 			return (NULL);
 		}
+		/* Initialise chaque élément du tableau à 0 */
 		for (j = 0; j < width; j++)
 		{
 			grid[i][j] = 0;
