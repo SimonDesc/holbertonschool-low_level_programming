@@ -12,7 +12,7 @@ int *array_range(int min, int max)
 	int *tableau = NULL;
 	int i;
 
-	if (min >= max)
+	if (min > max)
 	{
 		return (NULL);
 	}
