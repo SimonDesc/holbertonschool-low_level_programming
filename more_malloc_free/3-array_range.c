@@ -14,16 +14,16 @@ int *array_range(int min, int max)
 
 	if (min >= max)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
-	tableau = malloc(sizeof(int)*(max-min)+1);
-	if (tableau == NULL || sizeof(tableau) <= sizeof(int))
+	tableau = malloc(sizeof(int) * (max - min + 1));
+	if (tableau == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; min < max; i++, min++)
+	for (i = 0; min <= max; i++, min++)
 	{
 		tableau[i] = min;
 	}
