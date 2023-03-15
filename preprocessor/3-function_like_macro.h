@@ -1,4 +1,4 @@
 #ifndef _3_FUNCTION_LIKE_MACRO_
 #define _3_FUNCTION_LIKE_MACRO_
-#define ABS(unsigned int)
+#define ABS(X) ((X) < (0) ? (-X) : (X))
 #endif /* _3_FUNCTION_LIKE_MACRO_ */
