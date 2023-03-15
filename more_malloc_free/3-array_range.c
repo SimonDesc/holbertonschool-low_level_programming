@@ -13,7 +13,7 @@ int *array_range(int min, int max)
 	int i;
 
 	tableau = malloc(sizeof(int)*(max-min)+1);
-	if (tableau == NULL || sizeof(tableau == 1))
+	if (tableau == NULL || sizeof(tableau) <= sizeof(int))
 	{
 		return (NULL);
 	}
