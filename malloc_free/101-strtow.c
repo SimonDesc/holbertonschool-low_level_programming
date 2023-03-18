@@ -42,12 +42,10 @@ char **strtow(char *str)
 
 			strncpy(words[word_count], &str[i], j - i);
 			words[word_count][j - i] = '\0';
-
 			word_count++;
 			i = j;
 		}
 	}
-
 	words[word_count] = NULL;
 	if (word_count == 0)
 		return (NULL);
