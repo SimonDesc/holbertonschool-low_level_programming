@@ -49,6 +49,8 @@ char **strtow(char *str)
 	}
 
 	words[word_count] = NULL;
+	if (word_count == 0)
+		return (NULL);
 	return (words);
 }
 
