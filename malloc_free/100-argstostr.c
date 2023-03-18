@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Entry point
+ * argstostr - Concatenates all the arguments
  *
- * Return: Always 0 (Success)
+ * @ac: argc
+ * @av: argv
+ * Return: A pointer to a array of arguments
  */
-
 char *argstostr(int ac, char **av)
 {
 	char *dest = NULL;
@@ -14,32 +15,26 @@ char *argstostr(int ac, char **av)
 	int x = 0;
 	int k = 0;
 
-	if (ac == 0)
+	if (ac == 0 || av == 0)
 	{
 		return (NULL);
 	}
-	if (av == 0)
+	for (i = 0; i < ac ; i++)
 	{
-		return (NULL);
-	}
-
-	for (i = 0; i < ac ; i++) /* Compte le nombre d'argument */
-	{
-		for (k = 0; av[i][k] ; k++, j++) /* Compte le nombre de caractere de chaque argument */
+		for (k = 0; av[i][k]; k++, j++)
 		{
 		}
 		j++;
 	}
 	k = 0;
-
-	dest = malloc(sizeof(char)*j);
+	dest = malloc(sizeof(char) * j + 1);
 	if (dest == NULL)
 	{
 		return (NULL);
 	}
 	for (i = 0; i < ac ; i++) /* Compte le nombre d'argument */
 	{
-		for (k = 0; av[i][k] != '\0';x++, k++)
+		for (k = 0; av[i][k] != '\0'; x++, k++)
 		{
 			dest[x] = av[i][k];
 		}
@@ -48,5 +43,4 @@ char *argstostr(int ac, char **av)
 	}
 	dest[x] = '\0';
 	return (dest);
-
 }
