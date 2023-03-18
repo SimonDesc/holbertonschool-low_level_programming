@@ -23,21 +23,21 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (i = 0; i < ac ; i++)
+	for (i = 0; i < ac ; i++) /* Compte le nombre d'argument */
 	{
-		for (k = 0; av[i][k] ;k++, j++)
+		for (k = 0; av[i][k] ; k++, j++) /* Compte le nombre de caractere de chaque argument */
 		{
 		}
-		j += j;
+		j++;
 	}
 	k = 0;
 
-	dest = malloc(sizeof(char)*j + ac);
+	dest = malloc(sizeof(char)*j);
 	if (dest == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < ac ; i++)
+	for (i = 0; i < ac ; i++) /* Compte le nombre d'argument */
 	{
 		for (k = 0; av[i][k] != '\0';x++, k++)
 		{
@@ -45,8 +45,8 @@ char *argstostr(int ac, char **av)
 		}
 		dest[x] = '\n';
 		x++;
-	} 
+	}
 	dest[x] = '\0';
-       return (dest);
+	return (dest);
 
 }
