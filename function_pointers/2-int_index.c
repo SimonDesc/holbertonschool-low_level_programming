@@ -1,20 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * array_iterator - iterate a array
+ * int_index - Function that searches for an integer
  *
+ * @array: the array
+ * @size: size of the array
+ * @cmp: the pointer of function
  *
- *@array: the array
- *@size: the size
- *@action: function pointer
+ * Return: -1 is no elements matches or size <= 0
+ * otherwise the index of i
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
 	unsigned long int i = 0;
 
 	if (array == NULL)
 	{
-		return;
+		return (-1);
 	}
 	if (size <= 0)
 	{
