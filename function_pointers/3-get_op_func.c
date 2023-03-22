@@ -1,9 +1,11 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include "3-calc.h"
+
 /**
- * get_op_func - selects the correct function to perform
- * @s: the operator
- *
- * Return: A pointer to the function that corresponds to the operator
+ * get_op_func - Short description, single line
+ * @s: Description of parameter x
+ * Return: int
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -19,7 +21,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (i < 5)
 	{
-		if (*op_t[i].op == *s)
+		if (*ops[i].op == *s)
 		{
 			return (*ops[i].f);
 		}
