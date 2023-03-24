@@ -91,10 +91,9 @@ void print_all(const char * const format, ...)
 
 	va_start(arg, format);
 
-	while (format[i] != '\0' && format != NULL)
+	while (format != NULL && format[i] != '\0')
 	{
-		y = 0;
-		while (y < 4)
+		while (typ[y].op)
 		{
 			if (format[i] == *typ[y].op)
 			{
@@ -105,6 +104,7 @@ void print_all(const char * const format, ...)
 			y++;
 		}
 		i++;
+		y = 0;
 	}
 	printf("\n");
 	va_end(arg);
