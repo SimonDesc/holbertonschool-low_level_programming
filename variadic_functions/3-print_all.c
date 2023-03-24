@@ -94,7 +94,7 @@ void print_all(const char * const format, ...)
 	while (format[i] != '\0' && format != NULL)
 	{
 		y = 0;
-		while (typ[y].op)
+		while (y < 4)
 		{
 			if (format[i] == *typ[y].op)
 			{
