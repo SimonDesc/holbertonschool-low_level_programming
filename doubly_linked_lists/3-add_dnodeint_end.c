@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_dnodeint - adds a new node at the beginning of a list
+ * add_dnodeint_end - adds a new node at the beginning of a list
  * @head: the head
  * @n: the int to add
  *
@@ -33,6 +33,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	{
 		last_node = last_node->next;
 	}
+	new_node->prev = last_node;
 	/* Met à jour pointeur next dernier noeud pour pointer vers nouveau noeud */
 	last_node->next = new_node;
 	/* Retourne le pointeur vers la tête de la liste */
