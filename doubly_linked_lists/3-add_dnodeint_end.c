@@ -6,7 +6,7 @@
  *
  * Return: The adress of the new element or NULL if it failed
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	/* Initialise le pointeur last_node pointer le premier élément de liste */
 	dlistint_t *last_node = *head;
