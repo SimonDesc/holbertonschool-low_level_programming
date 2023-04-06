@@ -3,7 +3,7 @@
  * delete_dnodeint_at_index - Short description, single line
  * @head: the struct
  * @index: index
- (*
+ *
  * Return: The total of the nodes
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
