@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int bit_pos = 1 << 30;
+	unsigned long int bit_pos = 1 << 30;
 
 	if (n == 0)
 	{
