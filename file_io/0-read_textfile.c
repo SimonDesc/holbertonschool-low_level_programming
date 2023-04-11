@@ -13,6 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	char *buffer;
 	ssize_t rcount;
+	ssize_t numbers;
 
 	if (filename == NULL)
 	{
@@ -31,6 +32,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	write(1, buffer, rcount);
-	return (rcount);
+	numbers = rcount;
+	write (1, buffer, rcount);
+	close(rcount);
+
+	return (numbers);
 }
