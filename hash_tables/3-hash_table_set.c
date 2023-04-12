@@ -12,18 +12,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *newnode;
 	unsigned long int index;
 
-	cle = (unsigned char *)key;
-	index = key_index(cle, ht->size);
 
-	if (ht == NULL)
+	if (ht == NULL || key == NULL || value == NULL)
 	{
 		return (0);
 	}
-	newnode = malloc(sizeof(hash_node_t));
+	newnode = malloc(sizeof(hash_node_t) * 1);
 	if (newnode == NULL)
 	{
 		return (0);
 	}
+	cle = (unsigned char *)key;
+	index = key_index(cle, ht->size);
 	newnode->key = strdup(key);
 	newnode->value = strdup(value);
 	newnode->next = NULL;
