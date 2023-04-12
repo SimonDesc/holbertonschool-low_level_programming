@@ -1,12 +1,4 @@
 #include "hash_tables.h"
-/**
- * hash_table_set - Short description, single line
- * @ht: Description of parameter x
- * @key: the size
- * @value: the value
- * Return: Description of the returned value
- */
-#include "hash_tables.h"
 
 /**
  * hash_table_set - Ajoute ou met à jour un élément dans la table de hachage
